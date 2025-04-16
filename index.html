@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <audio id="customAudio">
+        <source src="audio/puzzle-game-bright-casual-video-game-music-249202.mp3" type="audio/mp3">
+    </audio>
+    
+    <div class="audio-player">
+        <button id="audio-button" onclick="playAudio()">▶ Play</button>
+        <button id="audio-button" onclick="pauseAudio()">⏸ Pause</button>
+    </div>
+    <div class="conf-container">
+      <h2 class="conf-title">IT'S QUIZ TIME ✊<button id="toggleButton">. </button></h2> 
+        <div class="conf-option">
+            <h4 class="opt-title">Category</h4>
+            <div class="catg-options">
+                <button class="catg-option active" data-category="General Knowledge and Aptitude">Aptitude 🧠✨</button>
+                <button class="catg-option" data-category="Academics & Science">Academics 🧠📚</button>
+                <button class="catg-option" data-category="Programming & Tech">Programming 🧠💻</button>
+                <button class="catg-option" data-category="Competitive Exam Preparation">Exam 🧠🎓</button>
+                <button class="catg-option" data-category="Entertainment & Pop Culture">Entertainment 🎬🎉 </button>
+                <button class="catg-option" data-category="Miscellaneous & Fun Topics">Miscellaneous 🧩❓</button>
+            </div>
+        </div>
+
+        <button class="startquiz">Start Quiz</button>
+    </div>
+    <div class="quiz-container">
+        <header class="quiz-header">
+            <h2 class="quiz-title">Quiz</h2>
+            <div class="quiz-timer">
+                <span class="material-symbols-outlined">
+                   
+                </span>
+                <p class="time-dur">s</p>
+            </div>
+        </header>
+        <div class="quizcontent">
+       
+        </div>
+        <div class="quiz-footer">
+            <p class="ques-status"><b>1</b> of <b>5</b> Questions</p>
+            <button class="next-ques">
+                Next
+                <span class="material-symbols-outlined">
+                  
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="result-container">
+        <img src="public/assets/quiz-over.png" alt="" class="result-img">
+        <h2 class="result-title">DONE 🎊</h2>
+        <p class="result-msg">_<b id="correct-answers"></b> out of <b id="total-questions"></b>_</p>
+        <p class="result-percentage">Score: <b id="score-percentage"></b>%</p>
+        <button class="try-again" onclick="restartQuiz()">Start Over</button>
+    </div>
+    <div class="timeout-container">
+        <h2 class="timeout-title">Time's Up!</h2>
+        <p class="timeout-msg">You ran out of time!💥💥</p>
+        <button class="try-again" onclick="restartQuiz()">Start Over</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
